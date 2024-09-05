@@ -5,7 +5,7 @@ import (
 	"search-engine/internal/models"
 )
 
-func SearchUser(db *sql.DB, searchTerm string) ([]models.User, error) {
+func SearchUsers(db *sql.DB, searchTerm string) ([]models.User, error) {
 
 	query := `
 	SELECT id, name, username, icon, bio WHERE username LIKE ? OR name LIKE ?
